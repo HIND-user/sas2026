@@ -1,15 +1,13 @@
-let num_premier = [];
-let num_Nom_premier = [];
-
 for (let i = 1 ; i <= 50 ;i++) {
-    let premier = false ;
-     if (i % 2 === 0) {
-        num_premier.push(i);
+    let premier = true
+    for (let j = 0; j <i ; j++) {
+        if ( i % j === 0) {
+            premier = false;
+        }
+        
     }
-    else{
-         num_Nom_premier.push(i);     }
-     
-    
+    if (premier) {
+        console.log(i);
+        
+    }
 }
-console.log(num_Nom_premier);
-// console.log(num_premier);
